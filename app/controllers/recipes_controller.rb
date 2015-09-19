@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :update, :destroy]
 
   def index
-    @brecipes = Recipe.all
+    @recipes = Recipe.all
 
     render json: @recipes
   end
