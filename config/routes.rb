@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  routes = [:beverages, :ingredients, :recipes]
+  routes = [:accounts, :beverages, :ingredients, :recipes]
 
   routes.each do |route|
     resources route
