@@ -44,6 +44,6 @@ class BeveragesController < ApplicationController
   end
 
   def beverage_params
-    params.require(:beverage).permit(:id, :name, :recipe)
+    params.require(:beverage).permit(:id, :name, recipe: [:name, :parts])
   end
 end
