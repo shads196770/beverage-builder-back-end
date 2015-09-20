@@ -40,10 +40,10 @@ class RecipesController < ApplicationController
   private
 
   def set_recipe
-    @recipe = Recipe.find(params[:id])
+    @recipe = Recipe.where(beverage_id: params[:beverage_id])
   end
 
   def recipe_params
-    params.require(:recipe).permit(:id, :drink_id, :ingredient_id, :parts)
+    params.require(:recipe).permit(:id, :beverage_id, :ingredient_id, :parts)
   end
 end
