@@ -12,7 +12,7 @@ class BeveragesController < ApplicationController
   end
 
   def create
-    @beverage = Beverage.new(beverage_params)
+    @beverage = Beverage.new(name: beverage_params[:name])
 
     if @beverage.save
       render json: @beverage, status: :created
@@ -44,6 +44,6 @@ class BeveragesController < ApplicationController
   end
 
   def beverage_params
-    params.require(:beverage).permit(:id, :name)
+    params.require(:beverage).permit(:id, :name, recipe: [:name, :parts])
   end
 end
