@@ -2,7 +2,7 @@ class BeveragesController < ApplicationController
   before_action :set_beverage, only: [:show, :update, :destroy]
 
   def index
-    @beverages = Beverage.all
+    @beverages = Beverage.all.order(:name)
 
     render json: @beverages
   end
