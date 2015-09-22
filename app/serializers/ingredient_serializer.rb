@@ -4,6 +4,6 @@ class IngredientSerializer < ActiveModel::Serializer
   has_many :beverages, through: :recipes
 
   def beverages
-    object.beverages.map(&:name)
+    object.beverages.map { |b| { id: b.id, name: b.name } }
   end
 end
