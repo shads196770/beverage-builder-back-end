@@ -1,3 +1,10 @@
+# Account seeds.
+accounts = [
+  { email: 'a@a.com', password: 'a' },
+  { email: 'b@b.net', password: 'b' },
+  { email: 'c@c.org', password: 'c' }
+]
+
 # Ingredient seeds.
 ingredients = [
   'Chocolate Liqueur',
@@ -56,11 +63,14 @@ beverages = [
 ]
 
 # Models
-models = [Beverage, Ingredient]
+models = [Account, Beverage, Ingredient]
 
 # Destroy all database records.
 # Recipe records are destroyed when their associated beverage record is destroyed.
 models.each(&:destroy_all)
+
+# Seed accounts.
+accounts.each { |account| Account.create(account) }
 
 # Seed ingredients.
 ingredients.each { |ingredient| Ingredient.create(name: ingredient) }
