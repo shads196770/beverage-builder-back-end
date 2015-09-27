@@ -1,17 +1,23 @@
 # Account seeds.
 accounts = [
-  { email: 'a@a.com', password: 'a' },
-  { email: 'b@b.net', password: 'b' },
-  { email: 'c@c.org', password: 'c' }
+  { email: 'c@c.com', password: 'c' },
+  { email: 'g@g.gov', password: 'g' },
+  { email: 'e@e.edu', password: 'e' },
+  { email: 'm@m.mil', password: 'm' },
+  { email: 'n@n.net', password: 'n' },
+  { email: 'o@o.org', password: 'o' }
 ]
 
 # Ingredient seeds.
 ingredients = [
   'Chocolate Liqueur',
   'Coconut Milk',
+  'Coffee Liqueur',
   'Cream',
   'Dry Vermouth',
+  'Fresh Cream',
   'Gin',
+  'Ginger Beer',
   'Lime Juice',
   'Orange Juice',
   'Pineapple Juice',
@@ -31,6 +37,13 @@ beverages = [
     ]
   },
   {
+    name: 'Black Russian',
+    ingredients: [
+      { name: 'vodka', parts: 5 },
+      { name: 'coffee liqueur', parts: 2 }
+    ]
+  },
+  {
     name: 'Daiquiri',
     ingredients: [
       { name: 'white rum', parts: 9 },
@@ -46,6 +59,14 @@ beverages = [
     ]
   },
   {
+    name: 'Moscow Mule',
+    ingredients: [
+      { name: 'vodka', parts: 9 },
+      { name: 'lime juice', parts: 1 },
+      { name: 'ginger beer', parts: 24 }
+    ]
+  },
+  {
     name: 'Piña Colada',
     ingredients: [
       { name: 'white rum', parts: 1 },
@@ -58,6 +79,14 @@ beverages = [
     ingredients: [
       { name: 'vodka', parts: 2 },
       { name: 'orange juice', parts: 1 }
+    ]
+  },
+  {
+    name: 'White Russian',
+    ingredients: [
+      { name: 'vodka', parts: 5 },
+      { name: 'coffee liqueur', parts: 2 },
+      { name: 'fresh cream', parts: 3 }
     ]
   }
 ]
