@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :accounts, :beverages, :ingredients
-  # get 'recipes/:beverage_id' => 'recipes#show'
+  get 'recipes/:beverage_id' => 'recipes#show'
+  resources :accounts, :beverages, :ingredients, :recipes
+
   # resources :recipes, except: [:show]
   #
   # resources :beverages do
