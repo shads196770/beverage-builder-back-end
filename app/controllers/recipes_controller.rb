@@ -8,7 +8,7 @@ class RecipesController < ApplicationController
   end
 
   def show
-    render json: @recipe
+    render json: @recipe, root: :recipe
   end
 
   def create
