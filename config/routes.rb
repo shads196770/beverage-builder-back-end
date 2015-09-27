@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
-  get 'recipes/:beverage_id' => 'recipes#show'
-  resources :recipes, except: [:show]
-
-  resources :beverages do
-    get 'recipe' => 'recipes#show'
-  end
-
-  resources :accounts, :ingredients
+  resources :accounts, :beverages, :ingredients
+  # get 'recipes/:beverage_id' => 'recipes#show'
+  # resources :recipes, except: [:show]
+  #
+  # resources :beverages do
+  #   get 'recipe' => 'recipes#show'
+  # end
+  #
+  # resources :accounts, :ingredients
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
