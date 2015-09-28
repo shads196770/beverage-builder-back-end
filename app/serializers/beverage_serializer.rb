@@ -1,5 +1,5 @@
 class BeverageSerializer < ActiveModel::Serializer
-  attributes :id, :name
+  attributes :id, :name, :updated_at
 
   has_many :recipes, root: :recipe
 
