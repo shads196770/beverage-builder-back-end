@@ -15,6 +15,9 @@ class BeveragesController < ApplicationController
     @beverage = Beverage.new(name: beverage_params[:name])
 
     if @beverage.save
+      @beverage.recipes.new(beverage_params[:recipe])
+      @beverage.save
+
       render json: @beverage, status: :created
     else
       render json: @beverage.errors, status: :internal_server_error
@@ -22,7 +25,8 @@ class BeveragesController < ApplicationController
   end
 
   def update
-    if @beverage.update(beverage_params)
+    if @beverage.update(name: beverage_params[:name])
+      Recipe.update_recipe(beverage_params[:id], beverage_params[:recipe])
       head :no_content
     else
       render json: @beverage.errors, status: :internal_server_error
@@ -44,6 +48,6 @@ class BeveragesController < ApplicationController
   end
 
   def beverage_params
-    params.require(:beverage).permit(:id, :name, recipe: [:name, :parts])
+    params.require(:beverage).permit(:id, :name, recipe: [:beverage_id, :ingredient_id, :name, :parts])
   end
 end
