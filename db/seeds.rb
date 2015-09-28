@@ -10,8 +10,13 @@ accounts = [
 
 # Ingredient seeds.
 ingredients = [
+  'Angosutra Bitters',
+  'Black Tea',
+  'Bourbon',
+  'Canadian Whisky',
   'Chocolate Liqueur',
   'Coconut Milk',
+  'Coffee',
   'Coffee Liqueur',
   'Cream',
   'Dry Vermouth',
@@ -22,6 +27,8 @@ ingredients = [
   'Orange Juice',
   'Pineapple Juice',
   'Simple Syrup',
+  'Sweet Red Vermouth',
+  'Sweetened Condensed Milk',
   'Vodka',
   'White Rum'
 ]
@@ -52,6 +59,20 @@ beverages = [
     ]
   },
   {
+    name: 'Hong Kong-Style Milk Tea',
+    ingredients: [
+      { name: 'black tea', parts: 5 },
+      { name: 'sweetened condensed milk', parts: 2 }
+    ]
+  },
+  {
+    name: 'Manhattan',
+    ingredients: [
+      { name: 'canadian whisky', parts: 5 },
+      { name: 'sweet red vermouth', parts: 2 }
+    ]
+  },
+  {
     name: 'Martini',
     ingredients: [
       { name: 'gin', parts: 6 },
@@ -64,6 +85,13 @@ beverages = [
       { name: 'vodka', parts: 9 },
       { name: 'lime juice', parts: 1 },
       { name: 'ginger beer', parts: 24 }
+    ]
+  },
+  {
+    name: 'Old Fashioned',
+    ingredients: [
+      { name: 'bourbon', parts: 9 },
+      { name: 'angosutra bitters', parts: 4 }
     ]
   },
   {
@@ -87,6 +115,14 @@ beverages = [
       { name: 'vodka', parts: 5 },
       { name: 'coffee liqueur', parts: 2 },
       { name: 'fresh cream', parts: 3 }
+    ]
+  },
+  {
+    name: 'Yuanyang',
+    ingredients: [
+      { name: 'coffee', parts: 3 },
+      { name: 'black tea', parts: 5 },
+      { name: 'sweetened condensed milk', parts: 2 }
     ]
   }
 ]
