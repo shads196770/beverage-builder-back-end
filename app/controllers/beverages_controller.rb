@@ -27,6 +27,8 @@ class BeveragesController < ApplicationController
   def update
     if @beverage.update(name: beverage_params[:name])
       Recipe.update_recipe(beverage_params[:id], beverage_params[:recipe])
+      @beverage.touch
+
       head :no_content
     else
       render json: @beverage.errors, status: :internal_server_error
