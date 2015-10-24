@@ -22,15 +22,24 @@ ingredients = [
   'Dry Vermouth',
   'Fresh Cream',
   'Gin',
+  'Ginger Ale',
   'Ginger Beer',
+  'Green Tea',
+  'Irish Cream',
   'Lime Juice',
+  'Milk',
   'Orange Juice',
   'Pineapple Juice',
+  'Rum',
+  'Scotch',
   'Simple Syrup',
   'Sweet Red Vermouth',
   'Sweetened Condensed Milk',
   'Vodka',
-  'White Rum'
+  'Water',
+  'Whiskey',
+  'White Rum',
+  'White Tea'
 ]
 
 # Beverage seeds.
